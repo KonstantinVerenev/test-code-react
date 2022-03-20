@@ -12,8 +12,8 @@ describe("isScheduleConflict", () => {
     const conflictList = [
       {
         id: "d4297a67-cfde-4841-81a8-aa90f719255b",
-        start: "2023-02-03T15:30:00.000Z",
-        end: "2023-02-03T16:30:00.000Z",
+        start: "2023-02-03T15:00:00.000Z",
+        end: "2023-02-03T16:00:00.000Z",
         room: {
           id: "401662b9-b110-4159-a4f2-ebd955f3b1f4",
           name: "Room A",
@@ -23,8 +23,8 @@ describe("isScheduleConflict", () => {
       },
       {
         id: "306df302-d117-4257-80df-856bba2cd644",
-        start: "2023-02-03T15:55:00.000Z",
-        end: "2023-02-03T16:55:00.000Z",
+        start: "2023-02-03T15:30:00.000Z",
+        end: "2023-02-03T16:30:00.000Z",
         room: {
           id: "70866847-3a55-407e-9973-841ac4c16a29",
           name: "Room B",
@@ -41,8 +41,8 @@ describe("isScheduleConflict", () => {
     const listWithoutConflict = [
       {
         id: "d4297a67-cfde-4841-81a8-aa90f719255b",
-        start: "2023-02-03T15:30:00.000Z",
-        end: "2023-02-03T16:30:00.000Z",
+        start: "2023-02-03T15:00:00.000Z",
+        end: "2023-02-03T16:00:00.000Z",
         room: {
           id: "401662b9-b110-4159-a4f2-ebd955f3b1f4",
           name: "Room A",
@@ -52,8 +52,8 @@ describe("isScheduleConflict", () => {
       },
       {
         id: "306df302-d117-4257-80df-856bba2cd644",
-        start: "2023-02-03T16:30:00.000Z",
-        end: "2023-02-03T16:55:00.000Z",
+        start: "2023-02-03T16:00:00.000Z",
+        end: "2023-02-03T17:00:00.000Z",
         room: {
           id: "70866847-3a55-407e-9973-841ac4c16a29",
           name: "Room B",

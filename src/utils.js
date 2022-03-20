@@ -1,5 +1,5 @@
 /**
- * @param {{ start: Date, end: Date }[]} reservations - list of reservations
+ * @param {{ id: string, start: Date, end: Date }[]} reservations - list of reservations
  *
  * @returns true if any 2 reservations conflict
  *   - reservations conflict if their times overlap in any way
@@ -12,7 +12,8 @@ export const isScheduleConflict = (reservations) => {
   return reservations.some((res1) => {
     return reservations.some((res2) => {
       return (
-        new Date(res1.start) < new Date(res2.start) &&
+        res1.id !== res2.id &&
+        new Date(res1.start) <= new Date(res2.start) &&
         new Date(res1.end) > new Date(res2.start)
       );
     });
